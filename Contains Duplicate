@@ -1,0 +1,12 @@
+bool containsDuplicate(vector<int>& nums) {
+        map<int,int>mp;
+        for(int i=0; i<nums.size(); i++)
+        {
+            int number=nums[i];
+            if(mp.find(number)!=mp.end())
+            return true;
+
+            mp[number]=i;
+        }
+        return false;  
+    }
